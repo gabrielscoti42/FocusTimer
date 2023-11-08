@@ -1,8 +1,7 @@
 import state from "./state.js"
 import * as el from "./elements.js"
-import * as timer from "./"
 import { reset } from "./actions.js"
-import { kitchenTimer } from "./sounds,js"
+import { kitchenTimer } from "./sounds.js"
 export function updateDisplay(minutes, seconds) {
     minutes = minutes ?? state.minutes
     seconds = seconds ?? state.seconds
@@ -13,10 +12,10 @@ export function updateDisplay(minutes, seconds) {
 
 export function countdown() {
     clearTimeout(state.countdownId)
-    if(!state.running) {
+    if(!state.isRunning) {
         return
     }
-    let minutes = Number(el.mminutes.textContent)
+    let minutes = Number(el.minutes.textContent)
     let seconds = Number(el.seconds.textContent)
     seconds--
     if(seconds < 0){

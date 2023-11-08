@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Focus Timer</title>
+  <head>
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temporizador estilo pomodoro" />
 
+    <!-- Links -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svgs">
-    <link rel="stylesheet" href="style.css">
     <script type="module" src="./src/main.js" defer></script>
-</head>
-<body>
+
+    <!-- Other -->
+    <title>Focus Timer</title>
+  </head>
+  <body>
     <div class="app">
-    <button id="toggleMode">
-        <!-- <span>Ativar/Desativar Light Mode</span> -->
+      <!-- Dark Mode -->
+      <button id="toggleMode">
+        <span class="srOnly">Ativar/Desativar Light Mode</span>
         <i class="ph-bold ph-sun"></i>
         <i class="ph-bold ph-moon"></i>
-    </button>
-    <section id="timer" class="flex">
+      </button>
+
+      <!-- Timer -->
+      <section id="timer" class="flex">
         <span id="minutes">00</span>
         <span>:</span>
         <span id="seconds">00</span>
-    </section>
+      </section>
 
-     <section id="controls" class="flex">
-        <button class="ph ph-play-circle" data-action="toggleRunning"></button>
-        <button class="ph ph-pause-circle" data-action="toggleRunning"></button>
-        <button class="ph ph-timer secondary" data-action="set"></button>
-        <button class="ph ph-stop-circle secondary" data-action="stop"></button>
-        <button class="ph ph-speaker-none secondary" data-action="toggleMusic"></button>
-        <button class="ph ph-speaker-high" data-action="toggleMusic"></button>
-    </section>
+      <!-- Controls -->
+      <section id="controls" class="flex">
+        <button class="ph ph-play-circle" data-action="toggleRunning">
+          <span class="srOnly">Iniciar contador</span>
+        </button>
+        <button class="ph ph-pause-circle" data-action="toggleRunning">
+          <span class="srOnly">Pausar contador</span>
+        </button>
+        <button class="ph ph-timer secondary" data-action="set">
+          <span class="srOnly">Ajustar contador</span>
+        </button>
+        <button class="ph ph-stop-circle secondary" data-action="stop">
+          <span class="srOnly">Reiniciar contador</span>
+        </button>
+        <button class="ph ph-speaker-none secondary" data-action="toggleMusic">
+          <span class="srOnly">Iniciar música</span>
+        </button>
+        <button class="ph ph-speaker-high" data-action="toggleMusic">
+          <span class="srOnly">Parar música</span>
+        </button>
+      </section>
     </div>
-</body>
+  </body>
 </html>

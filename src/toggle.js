@@ -1,5 +1,3 @@
 const buttonToggle = document.getElementById("toggleMode")
 
-buttonToggle.addEventListener("click", (event) => {
-    document.documentElement.classList.toggle("light")
-})
+buttonToggle.addEventListener("click", () => document.documentElement.classList.toggle("light"))
