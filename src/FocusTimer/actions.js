@@ -19,10 +19,12 @@ export function reset () {
 
 export function set () {
     el.minutes.setAttribute("contenteditable", true)
+    el.minutes.focus()
 }
 
 export function toggleMusic () {
     state.isMute = document.documentElement.classList.toggle("musicOn")
+
     if(state.isMute) {
         sounds.bgAudio.play()
         return
